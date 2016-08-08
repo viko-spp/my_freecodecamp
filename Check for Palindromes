@@ -1,0 +1,8 @@
+function palindrome(str) {
+  
+  return str.replace(/[\W_]/gi, '').toLowerCase() ===
+         str.split('').reverse().join('').replace(/[\W_]/gi, '').toLowerCase();
+  
+}
+
+palindrome("A man, a plan, a canal. Panama");

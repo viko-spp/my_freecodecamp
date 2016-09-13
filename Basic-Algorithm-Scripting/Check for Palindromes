@@ -6,3 +6,20 @@ function palindrome(str) {
 }
 
 palindrome("A man, a plan, a canal. Panama");
+
+более наглядно 
+
+function palindrome(str) {
+  // Good luck!
+  var nextStr = str.toLowerCase().replace(/[\W+_]/gi,'');
+  var reverseStr = nextStr.split('').reverse().join('');
+  
+  if(nextStr === reverseStr){
+    return true;
+  }
+  return false;
+}
+
+
+
+palindrome("A man1@, a plan, a canal. Panama");

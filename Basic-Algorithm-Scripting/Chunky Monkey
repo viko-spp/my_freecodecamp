@@ -1,5 +1,4 @@
 function chunkArrayInGroups(arr, size) {
-  // Break it up.
   var subArr = [];
   var mainArr = [];
   for(var i = 0; i < arr.length; i+= size){
@@ -8,6 +7,18 @@ function chunkArrayInGroups(arr, size) {
   }
   return mainArr;
 }
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
+// то же решение только с помощью цикла while
+
+function chunkArrayInGroups(arr, size) {
+  var mainArr = [];
+  var i = 0;
+  while(i < arr.length){
+    mainArr.push(arr.slice(i, size + i));
+    i+= size;
+  }
+  return mainArr;
+}
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
 

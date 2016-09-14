@@ -1,0 +1,18 @@
+ 
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+  var newStr = '';
+  if(num > 0){
+    newStr = str.split();
+    for(var x = 0; x < num - 1; x++){
+      newStr.push(str);
+    }
+  } else{
+    return '';
+  }
+  return newStr.join('');
+}
+
+repeatStringNumTimes("abc", 3);
+
+//num - 1 - так как длина строки начинается с [ 1 ] а массива с[ 0 ]

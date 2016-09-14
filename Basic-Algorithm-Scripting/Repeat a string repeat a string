@@ -16,3 +16,19 @@ function repeatStringNumTimes(str, num) {
 repeatStringNumTimes("abc", 3);
 
 //num - 1 - так как длина строки начинается с [ 1 ] а массива с[ 0 ]
+
+//более простой способ исключающий массивы
+
+ 
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+  var newStr = '';
+  if(num > 0){
+    for(var x = 0; x < num; x++){
+      newStr += str;
+    }
+  } 
+  return newStr;
+}
+
+repeatStringNumTimes("abc", 3);

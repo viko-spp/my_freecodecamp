@@ -1,0 +1,33 @@
+//===================================решение 1
+
+
+function titleCase(str) {
+  var arrLowerCase = str.toLowerCase().split(' ');
+  var newStr = '';
+  var newArr = [];
+  for(var i = 0; i < arrLowerCase.length; i++){
+    var upLetter = arrLowerCase[i].charAt(0).toUpperCase();
+    newStr = arrLowerCase[i].replace(arrLowerCase[i].charAt(0), upLetter);
+    newArr.push(newStr);
+    newStr = newArr.join(' ');
+  }
+  
+  return newStr;
+}
+
+
+titleCase("I'm a little tea pot");
+
+//====================================решение 2
+
+
+function titleCase(str) {
+  var arrLowerCase = str.toLowerCase().split(' ');
+   var newStr = arrLowerCase.map(function(val){
+      return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+    });
+  return newStr.join(' ');
+}
+
+
+titleCase("I'm a little tea pot");
